@@ -1,0 +1,115 @@
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.filters input {
+  padding: 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  flex: 1;
+  font-size: 16px;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.filters input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #fdf0d5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.book-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.book-info {
+  padding: 12px;
+}
+
+.book-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b263b;
+}
+
+.book-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+.no-books {
+  text-align: center;
+  color: gray;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filters input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .book-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .book-list {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card {
+    padding: 12px;
+  }
+}
